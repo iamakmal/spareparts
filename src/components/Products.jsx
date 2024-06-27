@@ -122,3 +122,18 @@ export default function Products() {
     </>
   )
 }
+
+//Using for loop instead of [...Array(totalPages)]
+
+// const pageItems = [];
+// for (let i = 1; i <= totalPages; i++) {
+//     pageItems.push(
+//       <li key={i} className={`page-item ${currentPage === i ? 'active' : ''}`}>
+//         <button onClick={() => paginate(i)} className="btn btn-outline">
+//           {i}
+//         </button>
+//       </li>
+//     );
+//   }
+  
+//   return <ul className="pagination">{pageItems}</ul>;
