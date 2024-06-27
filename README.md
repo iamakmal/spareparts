@@ -1,5 +1,5 @@
 ### Introduction
-This is an Informative Home Page for a spare parts business. This is developed using React. Used Daisy UI + Tailwind as the CSS Framework for styling purpose. Pagination feature is implemented here so the user does not have to scroll endlessly to view the products.
+This is an Informative Home Page for a spare parts business. This is developed using React. Used Daisy UI + Tailwind as the CSS Framework for styling purpose. Responsive Design Princples are considered here so it can be viewed on small, medium and large screens without any compromise in the user experience. Pagination feature is implemented here so the user does not have to scroll endlessly to view the products.
 
 ### Prerequisites
 - Visual Studio Code or any other code editor
