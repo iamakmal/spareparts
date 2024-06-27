@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Products() {
+    const[currentPage, setCurrentPage] = useState(1);
+    const[productsPerPage,setProductsPerPage] = useState(4);
 
     const products = [
         {
@@ -75,14 +77,23 @@ export default function Products() {
         }
     ]
 
+    const indexOfLastProduct = currentPage * productsPerPage
+    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+    const currentProducts = products.slice(indexOfFirstProduct,indexOfLastProduct)
+
+    const totalPages = Math.ceil(products.length/productsPerPage)
+
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+    
+
   return (
     <>
     <h1 className="text-5xl text-center mt-10">Our Products</h1>
     <h2 className="text-lg text-center text-gray-500 mb-10">All your needs at one place</h2>
-    <div className="flex justify-evenly items-center flex-wrap mb-10 m-5 gap-5">
+    <div className="flex justify-center items-center flex-wrap mb-10 m-5 gap-5">
     {
-        products.map((product)=>(
-            <div className="flex card flex-row items-center bg-base-100 w-fit shadow-lg p-5">
+        currentProducts.map((product, index)=>(
+            <div key={index} className="flex card flex-row items-center bg-base-100 w-fit shadow-lg p-5">
             <img src={product.image} className='h-fit w-40'/>
             <div className="flex flex-col">
                 <h1 className="text-xl font-bold">{product.name}</h1>
@@ -92,6 +103,21 @@ export default function Products() {
             </div>
         ))
     }
+    </div>
+    <div className="flex justify-center mb-10">
+    <nav>
+        <ul className="flex list-none gap-2 join">
+        {
+            [...Array(totalPages)].map((_,index) => (
+                <li key={index}>
+                    <button onClick={() => paginate(index + 1)} className={`join-item btn btn-outline ${currentPage === index+1 ? 'bg-yellow-500 text-white' : ''}`}>
+                        {index + 1}
+                    </button>
+                </li>
+            ))
+        }
+        </ul>
+    </nav>
     </div>
     </>
   )
