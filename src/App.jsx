@@ -1,8 +1,10 @@
+import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
 import Products from "./components/Products"
 import Provide from "./components/Provide"
 import Services from "./components/Services"
 import Slider from "./components/Slider"
+import Testimonial from "./components/Testimonial"
 
 function App() {
   
@@ -13,6 +15,8 @@ function App() {
      <Provide/>
      <Products/>
      <Services/>
+     <Testimonial/>
+     <Footer/>
     </>
   )
 }
