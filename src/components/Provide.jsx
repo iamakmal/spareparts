@@ -38,7 +38,7 @@ export default function Provide() {
                             <h2 className="card-title">{provide.title}</h2>
                             <p>{provide.body}</p>
                             <div className="card-actions justify-end">
-                                <button className="btn btn-primary">Shop Now</button>
+                                <button className="btn btn-outline text-white hover:bg-yellow-500">Shop Now</button>
                             </div>
                         </div>
                     </div>
