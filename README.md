@@ -16,7 +16,7 @@ This is an Informative Home Page for a spare parts business. This is developed u
    ```bash
    npm run dev
 
-### Screenshots
+### Screenshot
 ![sp](https://github.com/iamakmal/spareparts/assets/95517227/668c2531-25df-4457-a6f2-c592e2431ac8)
 
 
